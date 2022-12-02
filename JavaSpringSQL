@@ -1,0 +1,49 @@
+Microsoft Windows [Version 10.0.19044.2251]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\orangestep5>cd\
+
+C:\>curl http://localhost:8080/products
+[{"id":1,"name":"APPLE","price":5.0},{"id":2,"name":"APPLE","price":5.0},{"id":3,"name":"BANANA","price":4.6},{"id":4,"name":"ORANGE","price":2.7},{"id":5,"name":"GRAPES","price":1.5},{"id":6,"name":"APRICOT","price":3.4},{"id":7,"name":"STRAWBERRY","price":2.6},{"id":8,"name":"APPLE","price":5.0},{"id":9,"name":"BANANA","price":4.6},{"id":10,"name":"ORANGE","price":2.7},{"id":11,"name":"GRAPES","price":1.5},{"id":12,"name":"APRICOT","price":3.4},{"id":13,"name":"STRAWBERRY","price":2.6},{"id":14,"name":"APPLE","price":5.0},{"id":15,"name":"BANANA","price":4.6},{"id":16,"name":"ORANGE","price":2.7},{"id":17,"name":"GRAPES","price":1.5},{"id":18,"name":"APRICOT","price":3.4},{"id":19,"name":"STRAWBERRY","price":2.6},{"id":20,"name":"APPLE","price":5.0},{"id":21,"name":"BANANA","price":4.6},{"id":22,"name":"ORANGE","price":2.7},{"id":23,"name":"GRAPES","price":1.5},{"id":24,"name":"APRICOT","price":3.4},{"id":25,"name":"STRAWBERRY","price":2.6},{"id":26,"name":"APPLE","price":5.0},{"id":27,"name":"BANANA","price":4.6},{"id":28,"name":"ORANGE","price":2.7},{"id":29,"name":"GRAPES","price":1.5},{"id":30,"name":"APRICOT","price":3.4},{"id":31,"name":"STRAWBERRY","price":2.6},{"id":32,"name":"APPLE","price":5.0},{"id":33,"name":"BANANA","price":4.6},{"id":34,"name":"ORANGE","price":2.7},{"id":35,"name":"GRAPES","price":1.5},{"id":36,"name":"APRICOT","price":3.4},{"id":37,"name":"STRAWBERRY","price":2.6},{"id":38,"name":"APPLE","price":5.0},{"id":39,"name":"BANANA","price":4.6},{"id":40,"name":"ORANGE","price":2.7},{"id":41,"name":"GRAPES","price":1.5},{"id":42,"name":"APRICOT","price":3.4},{"id":43,"name":"STRAWBERRY","price":2.6},{"id":44,"name":"APPLE","price":5.0},{"id":45,"name":"BANANA","price":4.6},{"id":46,"name":"ORANGE","price":2.7},{"id":47,"name":"GRAPES","price":1.5},{"id":48,"name":"APRICOT","price":3.4},{"id":49,"name":"STRAWBERRY","price":2.6},{"id":50,"name":"APPLE","price":5.0},{"id":51,"name":"BANANA","price":4.6},{"id":52,"name":"ORANGE","price":2.7},{"id":53,"name":"GRAPES","price":1.5},{"id":54,"name":"APRICOT","price":3.4},{"id":55,"name":"STRAWBERRY","price":2.6},{"id":56,"name":"APPLE","price":5.0},{"id":57,"name":"BANANA","price":4.6},{"id":58,"name":"ORANGE","price":2.7},{"id":59,"name":"GRAPES","price":1.5},{"id":60,"name":"APRICOT","price":3.4},{"id":61,"name":"STRAWBERRY","price":2.6},{"id":62,"name":"APPLE","price":5.0},{"id":63,"name":"BANANA","price":4.6},{"id":64,"name":"ORANGE","price":2.7},{"id":65,"name":"GRAPES","price":1.5},{"id":66,"name":"APRICOT","price":3.4},{"id":67,"name":"STRAWBERRY","price":2.6},{"id":68,"name":"APPLE","price":5.0},{"id":69,"name":"BANANA","price":4.6},{"id":70,"name":"ORANGE","price":2.7},{"id":71,"name":"GRAPES","price":1.5},{"id":72,"name":"APRICOT","price":3.4},{"id":73,"name":"STRAWBERRY","price":2.6},{"id":74,"name":"APPLE","price":5.0},{"id":75,"name":"BANANA","price":4.6},{"id":76,"name":"ORANGE","price":2.7},{"id":77,"name":"GRAPES","price":1.5},{"id":78,"name":"APRICOT","price":3.4},{"id":79,"name":"STRAWBERRY","price":2.6},{"id":80,"name":"APPLE","price":5.0},{"id":81,"name":"BANANA","price":4.6},{"id":82,"name":"ORANGE","price":2.7},{"id":83,"name":"GRAPES","price":1.5},{"id":84,"name":"APRICOT","price":3.4},{"id":85,"name":"STRAWBERRY","price":2.6},{"id":86,"name":"APPLE","price":5.0},{"id":87,"name":"BANANA","price":4.6},{"id":88,"name":"ORANGE","price":2.7},{"id":89,"name":"GRAPES","price":1.5},{"id":90,"name":"APRICOT","price":3.4},{"id":91,"name":"STRAWBERRY","price":2.6}]
+C:\>curl http://localhost:8080/products
+[{"id":1,"name":"APPLE","price":5.0},{"id":92,"name":"BANANA","price":4.6},{"id":93,"name":"ORANGE","price":2.7}]
+C:\>curl http://localhost:8080/products
+[{"id":1,"name":"APPLE","price":5.0},{"id":92,"name":"BANANA","price":4.6},{"id":93,"name":"ORANGE","price":2.7}]
+C:\>curl http://localhost:8080/products/1
+{"id":1,"name":"APPLE","price":5.0}
+C:\>curl http://localhost:8080/products/2
+
+C:\>curl http://localhost:8080/products/1 -v
+*   Trying 127.0.0.1:8080...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+> GET /products/1 HTTP/1.1
+> Host: localhost:8080
+> User-Agent: curl/7.83.1
+> Accept: */*
+>
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Fri, 02 Dec 2022 08:31:20 GMT
+<
+{"id":1,"name":"APPLE","price":5.0}* Connection #0 to host localhost left intact
+
+C:\>curl http://localhost:8080/products/2
+
+C:\>curl http://localhost:8080/products/2 -v
+*   Trying 127.0.0.1:8080...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+> GET /products/2 HTTP/1.1
+> Host: localhost:8080
+> User-Agent: curl/7.83.1
+> Accept: */*
+>
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 404
+< Content-Length: 0
+< Date: Fri, 02 Dec 2022 08:32:01 GMT
+<
+* Connection #0 to host localhost left intact
+
+C:\>
